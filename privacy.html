@@ -41,6 +41,7 @@
   nav.docs a:hover { color: var(--accent); }
   h1 { font-size: 26px; font-weight: 800; margin: 0 0 6px; text-wrap: balance; }
   h2 { font-size: 17px; font-weight: 700; margin: 28px 0 8px; color: var(--accent); }
+  h3 { font-size: 15px; font-weight: 700; margin: 20px 0 6px; color: var(--text); }
   p { margin: 0 0 14px; font-size: 14.5px; }
   p.meta { color: var(--text-muted); font-size: 12.5px; margin: 0; }
   ul { margin: 0 0 14px; padding-inline-start: 22px; }
@@ -69,14 +70,14 @@
     <a class="" href="./cookie-policy.html">Cookie Policy</a>
   </nav>
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: 2026-08-05</p>
+  <p class="meta">Last updated: 2026-08-18</p>
 <p class="meta">Effective date: 2026-08-06</p>
 <p>This Privacy Policy explains how <strong>HandymanNow</strong> ("HandymanNow," "we," "us," or "our"), located at <strong>an address available upon request via Contact Support</strong>, collects, uses, discloses, and protects information in connection with the HandymanNow mobile application and related services (together, the "App"). It applies to Customers, Handymen, and anyone else who creates an account or otherwise uses the App.</p>
 <p>By creating an account or otherwise using the App, you agree to the collection and use of information as described in this Policy. If you do not agree, please do not use the App. This Policy is incorporated into, and should be read together with, our <a href="./terms.html">Terms of Service</a> and, where applicable, our <a href="./customer-terms.html">Customer Terms</a>, <a href="./handyman-agreement.html">Independent Handyman Agreement</a>, <a href="./cancellation-policy.html">Cancellation Policy</a>, <a href="./safety-policy.html">Safety Policy</a>, <a href="./community-guidelines.html">Community Guidelines</a>, and <a href="./cookie-policy.html">Cookie Policy</a>.</p>
 <h2>1. Scope of This Policy</h2>
 <p>This Policy covers information we collect through the App itself (the Customer and Handyman mobile experience, and our administrative web panel used by our team). It does not cover the practices of third parties we don't control, including a handyman's or customer's own conduct outside the App, or websites/services we merely link to.</p>
 <h2>2. Information We Collect</h2>
-<p>### 2.1 Information You Provide Directly</p>
+<h3>2.1 Information You Provide Directly</h3>
 <ul>
 <li><strong>Account information:</strong> full name, email address, phone number, password (stored in hashed form by our authentication provider, never in plain text by us), and role selection (Customer and/or Handyman).</li>
 <li><strong>Profile information:</strong> a profile photo you choose to upload, and — for handymen — biography, years of experience, services offered, skills, service radius/area, availability, portfolio/work photos, and any licensing/insurance documents submitted for approval.</li>
@@ -85,19 +86,30 @@
 <li><strong>Communications:</strong> the content of messages you send through in-app chat related to a job or to Support, and any reports, disputes, or reviews you submit.</li>
 <li><strong>Support and feedback:</strong> anything you submit through Contact Support, Report a Problem, Report an Issue, or an in-app satisfaction survey, including any photos attached to a report.</li>
 </ul>
-<p>### 2.2 Information Collected Automatically</p>
+<h3>2.2 Information Collected Automatically</h3>
 <ul>
 <li><strong>Location information:</strong> your device's precise or approximate location while you use location-dependent features of the App (see Section 4, "Location Information," for the specific rules that apply before and after a job relationship exists).</li>
 <li><strong>Device and usage information:</strong> device type, operating system, app version, IP address, general usage patterns within the App (such as which screens are used), and diagnostic/crash information, collected to keep the App reliable and secure.</li>
 <li><strong>Push notification tokens:</strong> a device-specific identifier used solely to deliver notifications to your device.</li>
 </ul>
-<p>### 2.3 Information From Third Parties</p>
+<h3>2.3 Information From Third Parties</h3>
 <ul>
 <li>If you choose to sign in using <strong>Google Sign-In</strong>, we receive the basic profile information (such as name and email) that Google shares with us based on your Google account settings and your consent at the time of sign-in.</li>
 <li>We do not currently purchase or receive information about you from data brokers or advertising networks.</li>
 </ul>
-<p>### 2.4 Payments (Not Currently Applicable)</p>
-<p>HandymanNow is presently a <strong>free beta</strong>. We do not currently process, collect, or store any payment card information, bank information, or other payment credentials, and no payment processor is integrated into the App at this time. If and when payment processing is introduced, it will be handled by a third-party payment processor to be named at that time, this Policy will be updated to describe what payment-related information is collected and how it is handled, and you will be notified before that feature goes live.</p>
+<h3>2.4 Payment Information (Handymen)</h3>
+<p>HandymanNow uses <strong>Stripe</strong> (Stripe, Inc.) to provide payment-method setup and payment processing functionality in the App. This applies to <strong>handymen only</strong> — customers are not asked for payment information anywhere in the App.</p>
+<p><strong>What Stripe handles, not us.</strong> When a handyman adds a payment method, the card or wallet details are entered into Stripe's own payment sheet and are submitted directly to Stripe. <strong>HandymanNow never receives or stores full card numbers, expiry dates, or CVC/security codes.</strong> Google Pay may be offered as a payment method inside that Stripe sheet, depending on your device and Google account.</p>
+<p><strong>What we send to Stripe.</strong> The handyman's name and email address, and an internal account identifier, so that Stripe can create and identify the corresponding customer record.</p>
+<p><strong>What we store.</strong> Only the identifiers and status information needed to operate the account and the lead features:</p>
+<ul>
+<li>the <strong>Stripe customer identifier</strong> associated with the account;</li>
+<li>the <strong>payment-method status</strong> (not added, pending, active, or failed);</li>
+<li>a Stripe-provided card <strong>fingerprint</strong> — a stable identifier that Stripe derives per physical card. It is not the card number, cannot be reversed into one, and cannot be used to charge a card. We use it for a single purpose: detecting the same card being used to claim the free-lead allowance on more than one handyman account;</li>
+<li>counts relating to a handyman's free-lead allowance and leads received.</li>
+</ul>
+<p><strong>No amount is charged.</strong> Adding a payment method uses a Stripe SetupIntent, which stores the method for future use and authorises <strong>$0</strong>. Consistent with Section 3 of our Terms of Service, HandymanNow does not currently charge handymen or customers, collect commissions, or process payment for the work performed between a customer and a handyman.</p>
+<p>Stripe processes the personal and payment-related information it receives under its own privacy practices. See Stripe's privacy policy at <a href="https://stripe.com/privacy">https://stripe.com/privacy</a>.</p>
 <h2>3. How We Use Information</h2>
 <p>We use the information described above to:</p>
 <ul>
@@ -125,6 +137,7 @@
 <li>our backend database, authentication, and file storage provider;</li>
 <li>mapping, geocoding, and directions providers, to show maps and estimate routes/ETAs;</li>
 <li>push notification delivery services;</li>
+<li><strong>Stripe</strong>, for payment-method setup and payment processing functionality (handymen only) — see Section 2.4;</li>
 <li>Google, if you use Google Sign-In.</li>
 </ul>
 <p>These providers are authorized to use your information only as necessary to provide their service to us, not for their own independent purposes.</p>
