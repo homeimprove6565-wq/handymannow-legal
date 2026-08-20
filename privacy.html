@@ -109,7 +109,8 @@
 <li>a Stripe-provided card <strong>fingerprint</strong> — a stable identifier that Stripe derives per physical card. It is not the card number, cannot be reversed into one, and cannot be used to charge a card. We use it for a single purpose: detecting the same card being used to claim the free-lead allowance on more than one handyman account;</li>
 <li>counts relating to a handyman's free-lead allowance and leads received.</li>
 </ul>
-<p><strong>No amount is charged.</strong> Adding a payment method uses a Stripe SetupIntent, which stores the method for future use and authorises <strong>$0</strong>. Consistent with Section 3 of our Terms of Service, HandymanNow does not currently charge handymen or customers, collect commissions, or process payment for the work performed between a customer and a handyman.</p>
+<p><strong>Handymen are charged real amounts for leads beyond their free allowance.</strong> Adding a payment method itself uses a Stripe SetupIntent, which stores the method and authorises <strong>$0</strong>; the charge happens later, when a paid lead is unlocked. We keep a record of each lead fee charged, and retain billing records for as long as tax and accounting obligations require. Stripe sends payment receipts directly to your email address, on its own behalf.</p>
+<p><strong>Customers are never charged by HandymanNow</strong>, and HandymanNow does not collect commissions or process payment for the work performed between a customer and a handyman.</p>
 <p>Stripe processes the personal and payment-related information it receives under its own privacy practices. See Stripe's privacy policy at <a href="https://stripe.com/privacy">https://stripe.com/privacy</a>.</p>
 <h2>3. How We Use Information</h2>
 <p>We use the information described above to:</p>
